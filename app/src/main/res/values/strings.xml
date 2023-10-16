@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ChatApplication</string>
+    <string name="your_web_client_id">161878806323-9ddgv9du1el9dahkrc17knie8nmha6ah.apps.googleusercontent.com</string>
+    <string name="google">Google 계정으로 로그인</string>
+    <string name="open">열기</string>
+    <string name="close">닫기</string>
+    <string name="title">닉네임</string>
+    <string name="hint">닉네임을 입력해주세요</string>
+    <string name="introduce">자기소개</string>
+    <string name="introduceHint">간단한 자기소개를 입력해주세요</string>
+    <string name="state">상태메시지</string>
+    <string name="stateHint">자신의 상태를 입력해주세요</string>
+    <string name="job">직업</string>
+    <string name="jobHint">직업을 입력해주세요</string>
+</resources>

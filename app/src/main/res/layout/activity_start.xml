@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/submitButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/mogun"
+                android:text="프로필 작성"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:src="@drawable/avatar_icon"
+                app:civ_border_color="@color/black"
+                app:civ_border_width="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+
+            <com.simform.customcomponent.SSCustomEdittextOutlinedBorder
+                android:id="@+id/nickNameEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:elevation="5dp"
+                android:inputType="textMultiLine|textCapSentences"
+                app:custom_component_border_color="@color/green"
+                app:custom_component_border_error_color="@color/color_error"
+                app:custom_component_editText_hint="@string/hint"
+                app:custom_component_title="@string/title"
+                app:custom_component_title_color="@color/green"
+                app:custom_component_title_error_color="@color/color_error"
+                app:isErrorEnable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+
+            <com.simform.customcomponent.SSCustomEdittextOutlinedBorder
+                android:id="@+id/introduceEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:elevation="5dp"
+                android:inputType="textMultiLine|textCapSentences"
+                app:custom_component_border_color="@color/green"
+                app:custom_component_border_error_color="@color/color_error"
+                app:custom_component_editText_hint="@string/introduceHint"
+                app:custom_component_title="@string/introduce"
+                app:custom_component_title_color="@color/green"
+                app:custom_component_title_error_color="@color/color_error"
+                app:isErrorEnable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nickNameEditText" />
+
+            <com.simform.customcomponent.SSCustomEdittextOutlinedBorder
+                android:id="@+id/stateEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:elevation="5dp"
+                android:inputType="textMultiLine|textCapSentences"
+                app:custom_component_border_color="@color/green"
+                app:custom_component_editText_hint="@string/stateHint"
+                app:custom_component_title="@string/state"
+                app:custom_component_title_color="@color/green"
+                app:isErrorEnable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/introduceEditText" />
+
+            <com.simform.customcomponent.SSCustomEdittextOutlinedBorder
+                android:id="@+id/jobEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:elevation="5dp"
+                android:inputType="textMultiLine|textCapSentences"
+                app:custom_component_border_color="@color/green"
+                app:custom_component_editText_hint="@string/jobHint"
+                app:custom_component_title="@string/job"
+                app:custom_component_title_color="@color/green"
+                app:isErrorEnable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/stateEditText" />
+
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/jobEditText" />
+
+            <TextView
+                android:id="@+id/birthDateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/mogun"
+                android:text="태어난 날"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view1" />
+
+
+            <com.example.chatapplication.CustomDatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/gray"
+                android:elevation="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/birthDateTextView" />
+
+
+            <TextView
+                android:id="@+id/personalityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/mogun"
+                android:text="성격"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/datePicker" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/personalityTextView">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip1"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="섬세한"
+                    android:textSize="20sp"
+                    app:checkedIcon="@drawable/check_mark_icon"
+                    app:checkedIconVisible="true"
+                    app:chipBackgroundColor="@color/gray"
+                    app:chipEndPadding="10dp"
+                    app:chipStartPadding="10dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip2"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="내성적"
+                    android:textSize="20sp"
+                    app:checkedIcon="@drawable/check_mark_icon"
+                    app:checkedIconVisible="true"
+                    app:chipBackgroundColor="@color/gray"
+                    app:chipEndPadding="10dp"
+                    app:chipStartPadding="10dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip3"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="차분한"
+                    android:textSize="20sp"
+                    app:checkedIcon="@drawable/check_mark_icon"
+                    app:checkedIconVisible="true"
+                    app:chipBackgroundColor="@color/gray"
+                    app:chipEndPadding="10dp"
+                    app:chipStartPadding="10dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip4"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="착한"
+                    android:textSize="20sp"
+                    app:checkedIcon="@drawable/check_mark_icon"
+                    app:checkedIconVisible="true"
+                    app:chipBackgroundColor="@color/gray"
+                    app:chipEndPadding="10dp"
+                    app:chipStartPadding="10dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip5"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="섹시한"
+                    android:textSize="20sp"
+                    app:checkedIcon="@drawable/check_mark_icon"
+                    app:checkedIconVisible="true"
+                    app:chipBackgroundColor="@color/gray"
+                    app:chipEndPadding="10dp"
+                    app:chipStartPadding="10dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip6"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="도도"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:checkedIcon="@drawable/check_mark_icon"
+                    app:checkedIconVisible="true"
+                    app:chipBackgroundColor="@color/gray"
+                    app:chipEndPadding="10dp"
+                    app:chipStartPadding="10dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip7"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="외향적"
+                    android:textSize="20sp"
+                    app:checkedIcon="@drawable/check_mark_icon"
+                    app:checkedIconVisible="true"
+                    app:chipBackgroundColor="@color/gray"
+                    app:chipEndPadding="10dp"
+                    app:chipStartPadding="10dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip8"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="4차원"
+                    android:textSize="20sp"
+                    app:checkedIcon="@drawable/check_mark_icon"
+                    app:checkedIconVisible="true"
+                    app:chipBackgroundColor="@color/gray"
+                    app:chipEndPadding="10dp"
+                    app:chipStartPadding="10dp" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <TextView
+                android:id="@+id/sexTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/mogun"
+                android:text="성별"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/chipGroup" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/sexChipGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sexTextView"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip9"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="75dp"
+                    android:text="남성"
+                    android:textSize="25sp"
+                    app:checkedIcon="@drawable/check_mark_icon"
+                    app:checkedIconVisible="true"
+                    app:chipEndPadding="30dp"
+                    app:chipStartPadding="30dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip10"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="75dp"
+                    android:text="여성"
+                    android:textSize="25sp"
+                    app:checkedIcon="@drawable/check_mark_icon"
+                    app:checkedIconVisible="true"
+                    app:chipEndPadding="30dp"
+                    app:chipStartPadding="30dp" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_bg"
+        android:backgroundTint="@color/red"
+        android:fontFamily="@font/mogun"
+        android:text="확인"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
